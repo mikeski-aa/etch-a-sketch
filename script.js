@@ -5,11 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const btn = document.querySelector('button');
     const container = document.querySelector('.container');
-    let x = 16;
-    let y = 16;
+    let x = 5;
+    let y = 5;
+
+//functions to be executed
+    drawStart();
 
 //function creates initial 16x16 divs    
+//for loop to create divs depending on X and Y values
     function drawStart(){
-
+        for (let i = 0; i < x*y; i++){
+            let newDiv = document.createElement('div');
+            container.appendChild(newDiv);
+        }
     }
 })
