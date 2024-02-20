@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const btn = document.querySelector('button');
     const container = document.querySelector('.container');
-    let x = 16;
-    let y = 16;
+    let x = 7;
+    let y = 15;
 
 //functions to be executed
     drawStart();
@@ -14,10 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
 //function creates initial 16x16 divs    
 //for loop to create divs depending on X and Y values
     function drawStart(){
+        dynamicScaling();
         for (let i = 0; i < x*y; i++){
             let newDiv = document.createElement('div');
             newDiv.classList.add('new');
             container.appendChild(newDiv);
         }
     }
+
+//scale width with number of X boxes, never above 960px
+    function dynamicScaling(){
+        let newWidth = x * 60;
+        if (newWidth > 960) {
+            alert('ERROR');
+        } else container.setAttribute('style', `width: ${newWidth}px`)
+    }
+
 })
