@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const btn = document.querySelector('button');
     const container = document.querySelector('.container');
-    let x = 5;
-    let y = 5;
+    let x = 16;
+    let y = 16;
 
 //functions to be executed
     drawStart();
@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function drawStart(){
         for (let i = 0; i < x*y; i++){
             let newDiv = document.createElement('div');
+            newDiv.classList.add('new');
             container.appendChild(newDiv);
         }
     }
