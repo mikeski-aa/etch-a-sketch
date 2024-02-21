@@ -4,25 +4,36 @@ body {
     align-items: center;
     padding: 0;
     margin: 0;
+    background-color: rgba(70, 68, 68, 0.438);
 }
 
 button {
     display:flex;
+    margin-bottom: 16px;
+    padding: 15px;
+    border-radius: 12px;
+    border-color: blue;
+    background-color: white;
+    
 }
 
 .container {
     display:flex;
     max-width: 960px;
+    min-width: 960px;
     flex-wrap: wrap;
+    
+
 }
 
-.new {
-    display:flex;
-    outline:1px solid black;
+.boxes {
+    display: flex;
+    outline: 1px solid black;
+    background: rgba(245, 245, 245, 0.623);
+
     aspect-ratio: 1/1;
-    width: 60px;
-    max-height: 60px;
-    max-width: 60px;
-    flex-grow: 1;   
-    
+}
+
+.new-colour {
+    background: pink;
 }
